@@ -1,5 +1,5 @@
 
-## Instagram Clone Course Demo App
+## Instagram Clone Demo App
 
 ![./cover.jpeg](/cover.png)
 
