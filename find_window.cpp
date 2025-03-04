@@ -1,16 +1,9 @@
-// Attempt to identify a window by name or attribute.
-// by Adam Pierce <adam@doctort.org>
-//
-// Taken from: http://stackoverflow.com/questions/151407/how-to-get-an-x11-window-from-a-process-id
-
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
 #include <iostream>
 #include <list>
 #include <stdlib.h>
-
 using namespace std;
-
 class WindowsMatchingPid
 {
 public:
@@ -30,7 +23,6 @@ public:
     }
 
     const list<Window> &result() const { return _result; }
-
 private:
     unsigned long  _pid;
     Atom           _atomPID;
@@ -57,7 +49,6 @@ private:
     			XFree(propPID);
     		}
     	}
-
     // Recurse into child windows.
     	Window    wRoot;
     	Window    wParent;
@@ -70,20 +61,15 @@ private:
     	}
     }
 };
-
 int main(int argc, char **argv)
 {
     if(argc < 2)
     	return 1;
-
     int pid = atoi(argv[1]);
     cout << "Searching for windows associated with PID " << pid << endl;
-
 // Start with the root window.
     Display *display = XOpenDisplay(0);
-
     WindowsMatchingPid match(display, XDefaultRootWindow(display), pid);
-
 // Print the result.
     const list<Window> &result = match.result();
     for(list<Window>::const_iterator it = result.begin(); it != result.end(); it++)
