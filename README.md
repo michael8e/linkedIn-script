@@ -7,3 +7,7 @@
 3 - Inside the home.blade.php, I've created a responsive grid with two columns: one for the main content and another for a sidebar. Both columns use Bootstrap's col-md-8 and col-md-4 classes.
 
 4 - A card component is used for both the content area and the sidebar, which is a common UI pattern in Bootstrap.
+
+## Final Output
+
+When you visit the route associated with this view, you'll see a Bootstrap-styled layout with a responsive grid and cards that adjust based on screen size.
