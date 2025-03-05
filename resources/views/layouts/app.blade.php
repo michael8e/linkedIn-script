@@ -18,6 +18,4 @@
 </body>
 </html>
 
-<!-- In the layout file above, the @yield('content') directive will be replaced by content from other Blade views.
-
- -->
+<!-- In the layout file above, the @yield('content') directive will be replaced by content from other Blade views.-->
